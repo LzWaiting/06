@@ -1,0 +1,52 @@
+代码协同管理工具
+
+	* 防止代码丢失，做备份
+	* 代码版本的管理，可以进行多个节点的备份，在多个版本之间跳跃
+	* 可以方便的将代码在多人之间进行共享传输
+	* 多人开发时有各种模式可以方便代码管理
+
+	什么是git?
+		git是一个开源的分布式版本控制系统，可用于高效的管理大小项目
+	分布式和集中式
+		分布式：每个节点都保存完成的代码，没有明确的中央服务器，节点之间项目推送下载代码完成代码共享，例如git
+		集中式：代码集中管理，每次完成的代码上传到中央管理器，然后再统一从中央管理器下载代码使用,例如svn
+
+	git特点：
+		* git可以管理各种文件，特别是代码项目，多在*nix系统中使用
+		* 是分布式管理，不同于集中式，这是git和svn的核心区别
+		* git可以更好的支持分支，方便多人协同工作
+		* git分布式代码更安全，有全球唯一的commit版本号
+		* git是开源的系统
+		* 使用git可以脱网工作，且数据传输速度较快
+
+	git 安装
+		linux:
+			sudo apt-get install git
+		windows:
+			msysgit.github.io 
+
+	git 配置命令
+		git config
+		配置级别：
+			1. 系统中所有的用户都可以使用该配置
+				命令：git config --system
+				配置文件：/etc/gitconfig
+			2. 当前用户可使用该配置
+				命令：git config --global
+				配置文件：~/.gitconfig
+			3. 当前项目可使用该配置
+				命令：git config
+				配置文件：project/.git/config
+
+		配置内容：
+			1. 配置用户名
+				配置用户名为Tedu
+				e.g.sudo git config --system user.name Tedu
+			2. 配置用户邮箱
+				配置邮箱
+				e.g.git config --global user.email 910122456@qq.com
+			3. 配置编译器
+				配置编译器
+				e.g.git config core.editor sublime
+			4. 查看配置信息
+				git config --list
